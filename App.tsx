@@ -1,10 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import HelloWorld from './lessons/lesson2/HelloWorld';
+import Greeter from './lessons/lesson2/Greeter';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={ {...styles.textDemo, ...styles.someOtherStyle} }>Hello React Native World</Text>
+      <HelloWorld />
+      <HelloWorld />
+      <HelloWorld />
+      <HelloWorld />
+      <Greeter name="Bob" />
+      <Greeter name="Alice" />
     </View>
   );
 }
@@ -12,8 +19,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textDemo: {
+    fontSize: 80,
+    color: 'red',    
+  },
+  someOtherStyle: {
+    backgroundColor: 'blue'
+  }
 });
