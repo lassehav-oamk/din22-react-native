@@ -1,17 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
-import HelloWorld from './lessons/lesson2/HelloWorld';
-import Greeter from './lessons/lesson2/Greeter';
+import { StyleSheet, Text, View, Image} from 'react-native';
+import Lesson2 from './lessons/lesson2/lesson2';
+import Lesson3 from './lessons/lesson3/lesson3';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={ {...styles.textDemo, ...styles.someOtherStyle} }>Hello React Native World</Text>
-      <HelloWorld />
-      <HelloWorld />
-      <HelloWorld />
-      <HelloWorld />
-      <Greeter name="Bob" />
-      <Greeter name="Alice" />
+      <Image 
+        resizeMode="contain"
+        source={require('./image/testimage.png')}
+        style={{ width: 400, height: 400, backgroundColor: 'red'}}
+        />
     </View>
   );
 }
@@ -19,15 +18,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF',
+    flexDirection: 'column',
+    backgroundColor: '#000',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    width: '100%',
+    height: '100%',
+    paddingTop: 40,
   },
-  textDemo: {
-    fontSize: 80,
-    color: 'red',    
-  },
-  someOtherStyle: {
-    backgroundColor: 'blue'
-  }
+ 
 });
