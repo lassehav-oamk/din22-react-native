@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function lesson3() {
+export default function Lesson3() {
   return (
-    <View>
+    <View style={ styles.container }>
       <View style={ styles.firstRow }>
         <View style={{ ...styles.item, backgroundColor: '#22F', flex: 1}}></View>
         <View style={ {...styles.item, backgroundColor: '#22A', flex: 2}}></View>
@@ -15,8 +15,8 @@ export default function lesson3() {
         <View style={{...styles.item, backgroundColor: '#090', flex: 1}}></View>
       </View>
       <View style={styles.fourthRow}>
-        <View style={{flex: 1, backgroundColor: '#DDF', height: 100, width: '100%'}}></View>
-        <View style={{flex: 1, backgroundColor: '#DDC', height: 100, width: 100}}></View>
+        <View style={{backgroundColor: 'yellow', flexGrow: 1}}></View>
+        <View style={{backgroundColor: 'pink', flexGrow: 1}}></View>
       </View>
     </View>
   )
@@ -26,12 +26,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#000',
-    alignItems: 'center',
+    backgroundColor: '#000',    
     justifyContent: 'flex-start',
     width: '100%',
-    height: '100%',
-    paddingTop: 40,
+    height: '100%',    
   },
   firstRow: {
     flex: 1,
@@ -48,7 +46,9 @@ const styles = StyleSheet.create({
   },
   fourthRow: {
     flex: 1, 
-    flexDirection: 'column'
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch'
   },
   item: {
     height: '100%'

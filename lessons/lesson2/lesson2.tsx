@@ -3,7 +3,7 @@ import React from 'react'
 import HelloWorld from './HelloWorld'
 import Greeter from './Greeter'
 
-export default function lesson2() {
+export default function Lesson2() {
   return (
     <View>
       <Text>Hello React Native World</Text>

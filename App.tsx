@@ -1,30 +1,26 @@
 import { StyleSheet, Text, View, Image} from 'react-native';
-import Lesson2 from './lessons/lesson2/lesson2';
-import Lesson3 from './lessons/lesson3/lesson3';
+import Lesson2 from './lessons/lesson2/Lesson2';
+import Lesson3 from './lessons/lesson3/Lesson3';
+import Images from './lessons/lesson3/Images';
+import React from 'react';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image 
-        resizeMode="contain"
-        source={require('./image/testimage.png')}
-        style={{ width: 400, height: 400, backgroundColor: 'red'}}
-        />
+      <Lesson3 />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#000',
+    backgroundColor: '#D00',
     alignItems: 'center',
     justifyContent: 'flex-start',
     width: '100%',
     height: '100%',
     paddingTop: 40,
   },
- 
 });
