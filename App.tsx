@@ -3,12 +3,16 @@ import Lesson2 from './lessons/lesson2/Lesson2';
 import Lesson3 from './lessons/lesson3/Lesson3';
 import Images from './lessons/lesson3/Images';
 import React from 'react';
+import L4ButtonDemo from './lessons/lesson4/L4ButtonDemo';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Lesson3 />
+      { /* <Images /> */ }
+      { /* <Lesson2 /> */ }
+      { /* <Lesson3 /> */ }
+      <L4ButtonDemo />
     </View>
   );
 }
