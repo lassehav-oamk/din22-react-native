@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View,TouchableHighlight,
   TouchableOpacity,
   TouchableNativeFeedback,
-  TouchableWithoutFeedback } from 'react-native'
+  TouchableWithoutFeedback, 
+  Button, Pressable} from 'react-native'
 import React from 'react'
 
 export default function L4ButtonDemo() {
@@ -15,6 +16,24 @@ export default function L4ButtonDemo() {
       <View style={{ alignItems: 'center'}}>
       <Text style={{ fontSize: 40, color: 'white', paddingTop: 40, paddingBottom: 40}}>ButtonDemo</Text>
       </View>
+
+      <Button onPress={handlePress}
+        title="Button"
+        color="orange"
+        accessibilityLabel="Learn more about this button"
+      />     
+
+      <Pressable onPress={() => handlePress('Pressable')}
+        onPressIn={() => console.log('press activated')}
+        onLongPress={() => console.log('press long')}
+        onPressOut={() => console.log('press released')}
+        >
+        <View style={styles.touchable}>
+          <Text style={{ fontWeight: '700'}}>Pressable</Text>
+          <Text>Core Component wrapper that can detect various stages of press interactions on any of its defined children.</Text>
+          <Text>Platform Support: Works well across different platforms.</Text>
+        </View>
+      </Pressable> 
       
       <TouchableHighlight
         style={styles.touchable}
@@ -38,19 +57,14 @@ export default function L4ButtonDemo() {
         <Text>Platform Support: Works well across different platforms.</Text>
       </TouchableOpacity>
 
-      {TouchableNativeFeedback.canUseNativeFeedback ? (
-        <TouchableNativeFeedback
-          onPress={() => handlePress('TouchableNativeFeedback')}
-        >
-          <View style={styles.touchable}>
-            <Text>TouchableNativeFeedback</Text>
-          </View>
-        </TouchableNativeFeedback>
-      ) : (
-        <Text style={{ color: 'white', borderWidth: 1, borderColor: 'lightyellow', margin: 10, padding: 10}}>
-          TouchableNativeFeedback is not supported on this device. It is an Android-specific component for providing native feedback.
-        </Text>
-      )}
+      <TouchableNativeFeedback
+        onPress={() => handlePress('TouchableNativeFeedback')}
+      >
+        <View style={styles.touchable}>
+          <Text style={{ fontWeight: '700'}}>TouchableNativeFeedback</Text>
+          <Text>an Android-specific component for providing native feedback</Text>
+        </View>
+      </TouchableNativeFeedback>
 
       <TouchableWithoutFeedback
         onPress={() => handlePress('TouchableWithoutFeedback')}
