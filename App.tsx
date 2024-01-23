@@ -5,7 +5,7 @@ import Images from './lessons/lesson3/Images';
 import React from 'react';
 import L4ButtonDemo from './lessons/lesson4/L4ButtonDemo';
 import L4TextInputDemo from './lessons/lesson4/L4TextInputDemo';
-import L5FlatList from './lessons/lesson5/L5FlatList';
+import L5ExerciseSolutionFlatList from './lessons/lesson5ExerciseSolution/L5ExerciseSolutionFlatList';
 
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
     
       { /* <L4ButtonDemo /> */ }
       {/* <L4TextInputDemo /> */ }
-      <L5FlatList />
+      <L5ExerciseSolutionFlatList />
     </View>
   );
 }
