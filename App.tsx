@@ -6,6 +6,8 @@ import React from 'react';
 import L4ButtonDemo from './lessons/lesson4/L4ButtonDemo';
 import L4TextInputDemo from './lessons/lesson4/L4TextInputDemo';
 import L5ExerciseSolutionFlatList from './lessons/lesson5ExerciseSolution/L5ExerciseSolutionFlatList';
+import L6ReactState from './lessons/lesson6/L6ReactState';
+import L6Pedometer from './lessons/lesson6/L6Pedometer';
 
 
 export default function App() {
@@ -17,7 +19,9 @@ export default function App() {
     
       { /* <L4ButtonDemo /> */ }
       {/* <L4TextInputDemo /> */ }
-      <L5ExerciseSolutionFlatList />
+      {/*<L5ExerciseSolutionFlatList />  */ }
+      {/* <L6ReactState /> */ }
+      <L6Pedometer />
     </View>
   );
 }
