@@ -8,6 +8,7 @@ import L4TextInputDemo from './lessons/lesson4/L4TextInputDemo';
 import L5ExerciseSolutionFlatList from './lessons/lesson5ExerciseSolution/L5ExerciseSolutionFlatList';
 import L6ReactState from './lessons/lesson6/L6ReactState';
 import L6Pedometer from './lessons/lesson6/L6Pedometer';
+import L7Navigation from './lessons/lesson7/L7Navigation';
 
 
 export default function App() {
@@ -21,7 +22,8 @@ export default function App() {
       {/* <L4TextInputDemo /> */ }
       {/*<L5ExerciseSolutionFlatList />  */ }
       {/* <L6ReactState /> */ }
-      <L6Pedometer />
+      {/* <L6Pedometer /> */ }
+      <L7Navigation />
     </View>
   );
 }
