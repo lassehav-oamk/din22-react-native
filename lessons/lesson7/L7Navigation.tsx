@@ -30,17 +30,24 @@ export default function L7Navigation() {
   const [someStateVariable, setSomeStateVariable] = React.useState('foo');
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="FirstView" component={FirstView} />
-        <Stack.Screen name="SecondView">
-          {props => <SecondView {...props} someProp={someStateVariable} />}
-        </Stack.Screen>
-        
-        <Stack.Screen name="ThirdView" component={ThirdView} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={ styles.container }>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="FirstView" component={FirstView} />
+          <Stack.Screen name="SecondView">
+            {props => <SecondView {...props} someProp={someStateVariable} />}
+          </Stack.Screen>
+          
+          <Stack.Screen name="ThirdView" component={ThirdView} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: '100%',
+  },
+})
