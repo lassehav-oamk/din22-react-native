@@ -8,7 +8,9 @@ import L4TextInputDemo from './lessons/lesson4/L4TextInputDemo';
 import L5ExerciseSolutionFlatList from './lessons/lesson5ExerciseSolution/L5ExerciseSolutionFlatList';
 import L6ReactState from './lessons/lesson6/L6ReactState';
 import L6Pedometer from './lessons/lesson6/L6Pedometer';
-import L7Navigation from './lessons/lesson7/L7Navigation';
+//import L7Navigation from './lessons/lesson7/L7Navigation';
+import L7Navigation from './lessons/lesson7/Ex4Solution/L7Navigation';
+import L8DataFetching from './lessons/lesson8/L8DataFetching';
 
 
 export default function App() {
@@ -23,7 +25,9 @@ export default function App() {
       {/*<L5ExerciseSolutionFlatList />  */ }
       {/* <L6ReactState /> */ }
       {/* <L6Pedometer /> */ }
-      <L7Navigation />
+      {/* <L7Navigation /> */}
+      {/* <L7Navigation /> */}
+      <L8DataFetching />
     </View>
   );
 }
