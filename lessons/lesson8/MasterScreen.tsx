@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, Touchable, View, TouchableHighlight, ScrollView } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import MasterItem from './MasterItem'
 
-export default function MasterScreen() {
+export default function MasterScreen({ navigation }) {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
@@ -17,12 +17,18 @@ export default function MasterScreen() {
   
 
   return (
-    <View style={ styles.screen }>      
+    <View style={ styles.screen }>   
+      <ScrollView>
       {
         products.map((product) => {
-          return <MasterItem key={product.id} name={product.title} price={product.price} />
+          return <TouchableHighlight onPress={() => {
+            navigation.navigate('DetailScreen', { product })
+          }}>
+            <MasterItem key={product.id} name={product.title} price={product.price} />
+          </TouchableHighlight>
         })
       }
+      </ScrollView>
     </View>
   )
 }
